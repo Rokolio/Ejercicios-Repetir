@@ -7,10 +7,18 @@ Algoritmo ContadorDescendente
 	Leer inicio;
 	Escribir "Ingrese el punto de finalización:";
 	Leer final;
-	
-	Repetir
-		Escribir inicio;
-		inicio <- inicio - 1;
-	Hasta Que inicio = final
-	
+	Si inicio > final Entonces
+		Escribir inicio
+		Repetir
+			inicio <- inicio - 1;
+			Escribir inicio;
+		Hasta Que inicio = final;
+	SiNo
+		Si inicio = final Entonces
+			Escribir inicio
+		SiNo
+			Escribir "El punto de finalizacion no puede ser mayor que ", inicio;
+		FinSi
+	FinSi
+		
 FinAlgoritmo
